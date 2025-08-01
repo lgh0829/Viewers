@@ -85,5 +85,9 @@
     "StowMaxInstances": 10,
     "StowMaxSize": 10,
     "QidoCaseSensitive": false
-  }
+  },
+
+  "OnStoredInstance": [
+  "http://cxr-orchestrator:8000/api/webhook/on-store"
+]
 }
