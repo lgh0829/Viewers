@@ -1,5 +1,5 @@
 {
-  "Name": "Orthanc inside Docker",
+  "Name": "OHIF Development Orthanc",
   "StorageDirectory": "/var/lib/orthanc/db",
   "IndexDirectory": "/var/lib/orthanc/db",
   "StorageCompression": false,
@@ -47,7 +47,8 @@
   "HttpVerbose": true,
 
   "HttpTimeout": 10,
-  "HttpsVerifyPeers": true,
+  "HttpsVerifyPeers": false,
+  "HttpsVerifyCertificates": false,
   "HttpsCACertificates": "",
   "UserMetadata": {},
   "UserContentType": {},
@@ -89,5 +90,13 @@
 
   "OnStoredInstance": [
   "http://cxr-orchestrator:8000/api/webhook/on-store"
-]
+  ],
+  "CORSEnabled": true,
+  "CrossOriginResourceSharing": {
+    "Enabled": true,
+    "AllowedOrigins": ["*"],
+    "AllowCredentials": true,
+    "AllowedHeaders": ["*"],
+    "AllowedMethods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+  }
 }

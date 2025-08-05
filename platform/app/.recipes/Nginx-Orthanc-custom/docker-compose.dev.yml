@@ -20,6 +20,8 @@ services:
       - NODE_ENV=development
       - APP_CONFIG=config/default.js
     command: yarn run dev
+    depends_on:
+      - orthanc
     restart: unless-stopped
 
   # Orthanc DICOM server
